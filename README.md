@@ -35,17 +35,13 @@ Here are some of the most fun games available in this repository:
 2. Slope
 3. Tube Jumpers
 4. Super Mario 64
-...and more!
+...and more!
 
 ### For Coders :)
 
-Making games available offline can be a challenging task due to security restrictions. When running games locally using the `file://` protocol, fetching external resources is not allowed for security reasons. However, there is a workaround that enables loading JavaScript files locally.
-
-To make the games in this repository playable offline, a method utilizing data URLs was employed. The game data is embedded directly into JavaScript files using data URLs. This approach allows the games to be self-contained within the page, eliminating the need for external resource fetching.
-
 The JavaScript files in this repository contain the game data encoded as data URLs. When the page is loaded, these data URLs are converted to blob URLs using a conversion function. Blob URLs can be fetched locally since they are generated within the page itself.
 
-By using this technique, the repository includes various games, including those built with Flash. The Flash games utilize the Ruffle Flash Player emulator, allowing them to be played offline without requiring an internet connection.
+The Flash games also bundle Ruffle's WebAssembly runtimes as JavaScript data URLs, which are converted to blob URLs when the player starts. This allows Flash games to continue working when `Gams.html` is opened directly from disk.
 
 I that this approach provides an enjoyable offline gaming experience for coders and gamers alike.
 
