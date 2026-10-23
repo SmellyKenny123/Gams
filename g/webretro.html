@@ -1,111 +1,291 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>webretro</title>
-<style>
-:root{--nc-font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";--nc-font-mono:Consolas,monaco,'Ubuntu Mono','Liberation Mono','Courier New',Courier,monospace;--nc-tx-1:#000000;--nc-tx-2:#1A1A1A;--nc-bg-1:#FFFFFF;--nc-bg-2:#F6F8FA;--nc-bg-3:#E5E7EB;--nc-lk-1:#0070F3;--nc-lk-2:#0366D6;--nc-lk-tx:#FFFFFF;--nc-ac-1:#79FFE1;--nc-ac-tx:#0C4047}@media (prefers-color-scheme:dark){:root{--nc-tx-1:#ffffff;--nc-tx-2:#eeeeee;--nc-bg-1:#000000;--nc-bg-2:#111111;--nc-bg-3:#222222;--nc-lk-1:#3291FF;--nc-lk-2:#0070F3;--nc-lk-tx:#FFFFFF;--nc-ac-1:#7928CA;--nc-ac-tx:#FFFFFF}}*{margin:0;padding:0}address,area,article,aside,audio,blockquote,datalist,details,dl,fieldset,figure,form,iframe,img,input,meter,nav,ol,optgroup,option,output,p,pre,progress,ruby,section,table,textarea,ul,video{margin-bottom:1rem}button,html,input,select{font-family:var(--nc-font-sans)}body{margin:0 auto;padding:2rem;border-radius:6px;overflow-x:hidden;word-break:break-word;overflow-wrap:break-word;background:var(--nc-bg-1);color:var(--nc-tx-2);font-size:1.03rem;line-height:1.5}::selection{background:var(--nc-ac-1);color:var(--nc-ac-tx)}h1,h2,h3,h4,h5,h6{line-height:1;color:var(--nc-tx-1);padding-top:.875rem}h1,h2,h3{color:var(--nc-tx-1);padding-bottom:2px;margin-bottom:8px;border-bottom:1px solid var(--nc-bg-2)}h4,h5,h6{margin-bottom:.3rem}h1{font-size:2.25rem}h2{font-size:1.85rem}h3{font-size:1.55rem}h4{font-size:1.25rem}h5{font-size:1rem}h6{font-size:.875rem}a{color:var(--nc-lk-1)}a:hover{color:var(--nc-lk-2)}abbr:hover{cursor:help}blockquote{padding:1.5rem;background:var(--nc-bg-2);border-left:5px solid var(--nc-bg-3)}abbr{cursor:help}blockquote :last-child{padding-bottom:0;margin-bottom:0}header{background:var(--nc-bg-2);border-bottom:1px solid var(--nc-bg-3);padding:2rem 1.5rem;margin:-2rem calc(0px - (50vw - 50%)) 2rem;padding-left:calc(50vw - 50%);padding-right:calc(50vw - 50%)}header h1,header h2,header h3{padding-bottom:0;border-bottom:0}header>:first-child{margin-top:0;padding-top:0}header>:last-child{margin-bottom:0}a button,button,input[type=button],input[type=reset],input[type=submit]{font-size:1rem;display:inline-block;padding:6px 12px;text-align:center;text-decoration:none;white-space:nowrap;background:var(--nc-lk-1);color:var(--nc-lk-tx);border:0;border-radius:4px;box-sizing:border-box;cursor:pointer;color:var(--nc-lk-tx)}a button[disabled],button[disabled],input[type=button][disabled],input[type=reset][disabled],input[type=submit][disabled]{cursor:default;opacity:.5;cursor:not-allowed}.button:focus,.button:hover,button:focus,button:hover,input[type=button]:focus,input[type=button]:hover,input[type=reset]:focus,input[type=reset]:hover,input[type=submit]:focus,input[type=submit]:hover{background:var(--nc-lk-2)}code,kbd,pre,samp{font-family:var(--nc-font-mono)}code,kbd,pre,samp{background:var(--nc-bg-2);border:1px solid var(--nc-bg-3);border-radius:4px;padding:3px 6px;font-size:.9rem}kbd{border-bottom:3px solid var(--nc-bg-3)}pre{padding:1rem 1.4rem;max-width:100%;overflow:auto}pre code{background:inherit;font-size:inherit;color:inherit;border:0;padding:0;margin:0}code pre{display:inline;background:inherit;font-size:inherit;color:inherit;border:0;padding:0;margin:0}details{padding:.6rem 1rem;background:var(--nc-bg-2);border:1px solid var(--nc-bg-3);border-radius:4px}summary{cursor:pointer;font-weight:700}details[open]{padding-bottom:.75rem}details[open] summary{margin-bottom:6px}details[open]>:last-child{margin-bottom:0}dt{font-weight:700}dd::before{content:'→ '}hr{border:0;border-bottom:1px solid var(--nc-bg-3);margin:1rem auto}fieldset{margin-top:1rem;padding:2rem;border:1px solid var(--nc-bg-3);border-radius:4px}legend{padding:auto .5rem}table{border-collapse:collapse;width:100%}td,th{border:1px solid var(--nc-bg-3);text-align:left;padding:.5rem}th{background:var(--nc-bg-2)}tr:nth-child(even){background:var(--nc-bg-2)}table caption{font-weight:700;margin-bottom:.5rem}textarea{max-width:100%}ol,ul{padding-left:2rem}li{margin-top:.4rem}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}mark{padding:3px 6px;background:var(--nc-ac-1);color:var(--nc-ac-tx)}input,select,textarea{padding:6px 12px;margin-bottom:.5rem;background:var(--nc-bg-2);color:var(--nc-tx-2);border:1px solid var(--nc-bg-3);border-radius:4px;box-shadow:none;box-sizing:border-box}img{max-width:100%}
-</style>
-<style>
-#cores {
- padding: 10px;
- border: 2px solid var(--nc-bg-3);
- background: var(--nc-bg-2);
-}
-
-#cores button {
- padding: 5px;
- border: 3px solid var(--nc-lk-2);
- display: block;
- margin: 10px;
-}
-
-#cores button:hover {
- border: 3px solid var(--nc-lk-1);
-}
-</style>
-</head>
-<body>
-<div id="all">
-<header><h1>webretro</h1></header>
-<div id="cores">
- <h3>Select a Core</h3>
- <button data-value="mupen64plus_next">Nintendo 64</button>
- <button data-value="snes9x">SNES</button>
- <button data-value="nestopia">NES</button>
- <button data-value="mgba">GameBoy (GB/GBC/GBA)</button>
-</div>
-
-<div id="uploadROM" style="display:none">
- <h3>Upload ROM - <span id="coreName"></span></h3>
- <hr>
- <input type="file" id="fileInput">
- <button onclick="playROM()">Play ROM</button>
-</div>
-</div>
-<script>
-function generateRandomString() {
-  var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  var result = '';
-  
-  for (var i = 0; i < 10; i++) {
-    var randomIndex = Math.floor(Math.random() * chars.length);
-    result += chars.charAt(randomIndex);
-  }
-  return result;
-}
-
-var all = document.getElementById('all');
-var cores = document.getElementById('cores');
-var uploadROM = document.getElementById('uploadROM');
-var btns = cores.querySelectorAll('button');
-var coreName = document.getElementById('coreName');
-var fileInput = document.getElementById('fileInput');
-var userSelectCore = null;
- 
-btns.forEach(function(btn) {
- btn.addEventListener("click", function() {
-  selectCore(this.dataset.value);
- });
-});
-
-function selectCore(core) {
- uploadROM.style.display = "block";
- cores.style.display = "none";
- coreName.innerText = core;
- userSelectCore = core;
-}
-
-function playROM() {
- var gameROM = fileInput.files[0];
-  if (!gameROM) {
-  alert("Please upload a file.");
-  return;
- }
- all.remove();
- document.body.style = "width:100vw;height:100vh;margin:0;padding:0;overflow:hidden";
- var g = {
-  core: userSelectCore,
-  name: gameROM.name.split(".")[0]
- };
- var channel = generateRandomString();
- const bc = new BroadcastChannel(channel);
- var gameURL = URL.createObjectURL(gameROM);
- var url = `g/webretro/launch.html`;
- var finalURL = url + `?core=${g.core}&rom=channel&name=${g.name}&channel=${channel}`;
- var frame = document.createElement('iframe');
- frame.setAttribute('frameborder', 0);
- frame.style.width = '100%';
- frame.style.height = '100%';
- frame.style.margin = '0';
- frame.style.padding = '0';
- frame.src = finalURL;
- document.body.appendChild(frame);
- bc.onmessage = function(event) {
-  if (event.data.status == "ready") {
-   bc.postMessage({rom: gameROM});
-  }
- };
-}
-</script>
-</body>
+<!-- Source Code: https://github.com/BinBashBanana/webretro -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+		<meta name="color-scheme" content="dark light">
+		<meta name="theme-color" content="#333333">
+		<title>webretro (STANDALONE)</title>
+		<meta name="description" content="RetroArch in your browser! Libretro cores compiled to WASM using emscripten, plus a custom UI.">
+		<meta name="robots" content="nofollow">
+		<meta name="og:title" content="webretro">
+		<meta name="og:type" content="website">
+		<meta name="og:image" content="https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/assets/icons/icon204.png">
+		<meta name="og:url" content="https://binbashbanana.github.io/webretro/">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/assets/base.css?v=6.5">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/assets/jswindow.css">
+		<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/assets/icons/icon204.png">
+		<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/assets/icons/iconm256.png">
+		<link rel="manifest" href="https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/manifest.json">
+		<link rel="canonical" href="https://binbashbanana.github.io/webretro/">
+		<link rel="dns-prefetch" href="https://cdn.jsdelivr.net/">
+	</head>
+	<body>
+		<div class="main" id="mainarea">
+			<div id="menubar">
+				<input type="checkbox" id="menuhider">
+				<label for="menuhider" class="menuhiderlabel"></label>
+				<ul id="menu">
+					<li class="menuback"><a href="webretro.html" title="Back to core selection"></a></li>
+					<li>Controls
+						<ul>
+							<li><a id="keybindsbutton" href="">Keybinds</a></li>
+							<li class="menu-long menu-nohover">Please note that these are just the bindings that are set, but in-game controls may vary.</li>
+							<li><a href="" title="Opens in new tab" onclick="window.open(window.URL.createObjectURL(new Blob([decodeURIComponent(atob('JTNDIURPQ1RZUEUlMjBodG1sJTNFJTNDaHRtbCUzRSUzQ2hlYWQlM0UlM0NtZXRhJTIwaHR0cC1lcXVpdiUzRCUyMnJlZnJlc2glMjIlMjBjb250ZW50JTNEJTIyMSUzQlVSTCUzRGh0dHBzJTNBJTJGJTJGcmV0cm9waWUub3JnLnVrJTJGZG9jcyUyRlJldHJvQXJjaC1Db25maWd1cmF0aW9uJTJGJTIzZGVmYXVsdC1jb3JlLWNvbnRyb2xzLWZvci1hbGwtZW11bGF0b3JzJTIyJTNFJTNDdGl0bGUlM0VSZWRpcmVjdGluZyUzQyUyRnRpdGxlJTNFJTNDJTJGaGVhZCUzRSUzQ2JvZHklM0UlM0NoMiUzRVJlZGlyZWN0aW5nLi4uJTNDJTJGaDIlM0UlM0MlMkZib2R5JTNFJTNDJTJGaHRtbCUzRQ=='))], {type: 'text/html'})));return false;">System Specifics</a></li>
+						</ul>
+					</li>
+					<li>Saves
+						<ul>
+							<li class="pointer disabled" id="savegame">Save Game</li>
+							<li class="pointer disabled" id="resetbutton">Reset</li>
+							<li class="pointer disabled" id="exportsave">Export SRAM</li>
+							<li class="pointer disabled" id="importsave">Import SRAM</li>
+							<li class="disabled"><label><input type="checkbox" id="autosave" checked disabled>Autosave (5m)</label></li>
+							<li><a id="savesbutton" href="">Recover Saves</a></li>
+							<li class="menu-long menu-nohover" style="width: 200px;">Please note that in order for the game to be saved, you must use the save feature in-game (unless of course the game itself autosaves), then press the save button here (Or autosave must happen). <b>These saves are only for in-game save files. If you want to be able to save at any time, use save states.</b> Saves and states are saved in your browser's indexedDB and are automatically readied every time you visit the page. You only need to use export and import for backups.</li>
+						</ul>
+					</li>
+					<li>States
+						<ul>
+							<li class="pointer disabled" id="savestate">Save State</li>
+							<li class="pointer disabled" id="loadstate">Load State</li>
+							<li class="pointer disabled" id="undosavestate">Undo Save State</li>
+							<li class="pointer disabled" id="undoloadstate">Undo Load State</li>
+							<li class="pointer disabled" id="exportstate">Export State</li>
+							<li class="pointer disabled" id="importstate">Import State</li>
+							<li><a id="statesbutton" href="">Recover States</a></li>
+							<li class="menu-long menu-nohover" style="width: 200px;">You must save state before you export state; exported states are not states from the time of exporting.</li>
+						</ul>
+					</li>
+					<li>Screenshots
+						<ul>
+							<li class="pointer disabled" id="takescreenshot">Take Screenshot</li>
+							<li><a id="screenshotsbutton" href="">Screenshots</a></li>
+						</ul>
+					</li>
+					<li>More
+						<ul>
+							<li class="disabled" title="May resolve minor scaling issues"><label><input type="checkbox" id="smooth" disabled>Smooth Scaling</label></li>
+							<li class="pointer" id="fullscreenbutton">Fullscreen</li>
+							<li class="pointer" id="consolebutton">Console</li>
+							<li>Theme
+								<ul>
+									<li class="menu-nohover">
+										<form id="themeselector" class="menuform">
+											<label><input type="radio" name="theme" value="iodinelight">Iodine (Light)</label>
+											<label><input type="radio" name="theme" value="iodinedark">Iodine (Dark)</label>
+											<label><input type="radio" name="theme" value="webplayer">Web Player</label>
+											<label><input type="radio" name="theme" value="webplayernavy">Web Player (Navy)</label>
+											<label class="disabled"><input type="radio" name="theme" value="emulatorjs" disabled>EmulatorJS</label>
+										</form>
+									</li>
+								</ul>
+							</li>
+							<li class="pointer disabled" id="resetbutton2">Reset</li>
+							<li class="pointer disabled" id="mousegrabbutton">Mouse Grab</li>
+							<li class="pointer disabled" id="gamefocusbutton">Game Focus</li>
+							<li>Cheats
+								<ul class="xlmenu">
+									<li>How to apply a cheat code</li>
+									<li>1. Open the Menu</li>
+									<li>2. Scroll down</li>
+									<li>3. Click "Cheats"</li>
+									<li>4. Click "Add new cheat to bottom/top"</li>
+									<li>5. Click the new cheat that you just created</li>
+									<li>6. Click "Code"</li>
+									<li>7. Enter/paste the cheat code</li>
+									<li>8. When you are done, press enter</li>
+									<li>9. Click "Enabled" (Set to ON)</li>
+									<li>10. Go back to Cheats by clicking the bar on the top</li>
+									<li>11. Click "Apply Changes"</li>
+									<li>12. Exit the menu</li>
+									<li class="disabled">(More coming soon)</li>
+								</ul>
+							</li>
+							<li>Shaders
+								<ul>
+									<li class="disabled">(Coming soon)</li>
+								</ul>
+							</li>
+							<li id="pso">Pre-start Options
+								<ul>
+									<li class="menu-nohover">
+										<form class="menuform" data-core="a5200">
+											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+										</form>
+										<form class="menuform" data-core="mednafen_psx">
+											<label><input type="checkbox" data-opt="highres">High Resolution</label>
+											<label><input type="checkbox" data-opt="ditherscaling">Dither Scaling</label>
+											<label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
+											<label><input type="checkbox" data-opt="antijitter">PGXP Anti-jitter</label>
+										</form>
+										<form class="menuform" data-core="mednafen_psx_hw">
+											<label><input type="checkbox" data-opt="softwarerenderer">Use Software Renderer</label>
+											<label><input type="checkbox" data-opt="highres">High Resolution</label>
+											<label><input type="checkbox" data-opt="ditherscaling">Dither Scaling</label>
+											<label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
+											<label><input type="checkbox" data-opt="antijitter">PGXP Anti-jitter</label>
+										</form>
+										<form class="menuform" data-core="mednafen_vb">
+											<label><input type="checkbox" data-opt="anaglyph">Red/Blue Anaglyph</label>
+										</form>
+										<form class="menuform" data-core="mednafen_wswan">
+											<label><input type="checkbox" data-opt="75hz">75hz Mode</label>
+											<label><input type="checkbox" data-opt="portrait">Portrait Orientation</label>
+											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+										</form>
+										<form class="menuform" data-core="melonds">
+											<label><input type="checkbox" data-opt="leftright">Left/Right</label>
+										</form>
+										<form class="menuform" data-core="mgba">
+											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+										</form>
+										<form class="menuform" data-core="mupen64plus_next">
+											<label><input type="checkbox" data-opt="highres">High Resolution</label>
+											<label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
+										</form>
+										<form class="menuform" data-core="o2em">
+											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+										</form>
+										<form class="menuform" data-core="parallel_n64">
+											<label><input type="checkbox" data-opt="highres">High Resolution</label>
+											<label title="Use gles2n64 instead of Glide64"><input type="checkbox" data-opt="renderer2">Use glN64</label>
+										</form>
+										<form class="menuform" data-core="prosystem">
+											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+										</form>
+										<form class="menuform" data-core="snes9x">
+											<label><input type="checkbox" data-opt="mouse">SNES Mouse</label>
+										</form>
+										<form class="menuform" data-core="stella2014">
+											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+										</form>
+										<form class="menuform" data-core="vecx">
+											<label><input type="checkbox" data-opt="softwarerenderer">Use Software Renderer</label>
+										</form>
+										<form class="menuform" data-core="virtualjaguar">
+											<label><input type="checkbox" data-opt="fastblitter">Fast Blitter</label>
+										</form>
+										<form class="menuform" data-core="yabause">
+											<label><input type="checkbox" data-opt="frameskip">Enable Frameskip</label>
+										</form>
+									</li>
+								</ul>
+							</li>
+							<li class="pointer" id="downloadstandalonebutton">Download Standalone</li>
+							<li><a href="https://github.com/BinBashBanana/webretro" target="_blank">GitHub</a></li>
+						</ul>
+					</li>
+					<li id="menubutton" class="disabled">
+						Menu
+					</li>
+					<li id="pause" class="disabled">
+						Pause
+					</li>
+				</ul>
+			</div>
+			<h1 id="webretrotitle">webretro</h1>
+			<div id="ffd">
+				<div id="ffdcontent">
+					<div id="coreselectarea">
+						<h3>Select a Core</h3>
+						<div class="coreorderrow">
+							<label for="coreorder">Sort by:</label>
+							<select id="coreorder">
+								<option value="system" selected>System</option>
+								<option value="corename">Core name</option>
+								<option value="libraryname">Library name</option>
+							</select>
+						</div>
+						<ul class="corelistul">
+							<li><a href="?core=autodetect" class="greyer">AutoDetect (Slower to load)</a></li>
+							<span id="corelist"></span>
+						</ul>
+					</div>
+					<div id="uploadarea">
+						<h2><span id="systemname"></span> Emulator</h2>
+						<input type="button" id="upload" value="Choose ROM File" class="uploadbutton">
+						<br>
+						<img id="googledriveupload" class="uploadbutton uploadimage" title="Google Drive Upload" src="https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/assets/icons/googledrive.png">
+						<img id="dropboxupload" class="uploadbutton uploadimage" title="Dropbox Upload" src="https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/assets/icons/dropbox.png">
+						<img id="onedriveupload" class="uploadbutton uploadimage" title="OneDrive Upload" src="https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/assets/icons/onedrive.png">
+					</div>
+				</div>
+				<div class="source">
+					<a href="https://github.com/BinBashBanana/webretro" target="_blank">GitHub</a>
+					<a href="https://github.com/libretro" target="_blank">Libretro</a>
+					<a href="" target="_blank" id="coregithub">Core Github</a>
+					<a href="https://emscripten.org" target="_blank">Emscripten</a>
+					<a href="https://binbashbanana.github.io/webretro/info/" target="_blank">Info</a>
+					<span id="versionindicator"></span>
+				</div>
+			</div>
+			<p id="updatenotice"></p>
+			<input type="button" id="startbutton" value="Start">
+			<div id="loadingdiv">
+				<p class="loadingloading">Loading</p>
+				<p id="loadingtext"></p>
+				<progress id="loadingbar" max="1"></progress>
+			</div>
+			<canvas id="canvas" class="texturePixelated"></canvas>
+			<div id="canvasmask">
+				<div id="resume">
+					<div>
+						<h1>Paused</h1>
+						<h3>Click to resume</h3>
+					</div>
+				</div>
+				<div id="sidealertholder"></div>
+			</div>
+			<div id="modals">
+				<div id="managers">
+					<div class="modaltop">
+						<h2 id="managertitle"></h2>
+						<span id="managerclose">&#x2716;</span>
+					</div>
+					<div id="keybindmanager">
+						<h4>Click on the right column to change a key. Press save when you are finished!</h4>
+						<table class="managertableparent managertableparentshort">
+							<tbody class="managertable" id="keybindtable"></tbody>
+						</table>
+						<input type="button" id="savekeybinds" class="specialblue" value="Save">
+						<input type="button" id="resetkeybinds" value="Reset to Default">
+					</div>
+					<div id="screenshotmanager">
+						<div id="screenshotsdiv"></div>
+						<div class="screenshotsbottom">
+							<h4>Screenshots do not persist through page reloads! Download your screenshots now!</h4>
+							<input type="button" id="downloadallscreenshots" value="Download All (zip)">
+						</div>
+					</div>
+					<div id="savemanager">
+						<table class="managertableparent">
+							<tbody class="managertable" id="savetable"></tbody>
+						</table>
+						<h4>Here, you can download all of the webretro saves and states made on <i>this domain</i>.</h4>
+						<div class="savesbottom">
+							<span id="quotatext"></span>
+						</div>
+					</div>
+					<div id="romselector">
+						<table class="managertableparent">
+							<tbody class="managertable" id="romselectortable"></tbody>
+						</table>
+						<h4 id="recommendedextensions"></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var relativeBase = "https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/";
+		</script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/assets/zip-2.4.7.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/assets/md5.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/uauth/uauth.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/assets/jswindow.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/pwa.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/assets/charToCodeMap.js?v=6.5"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/BinBashBanana/webretro@6.5/assets/base.js?v=6.5"></script>
+	</body>
 </html>
