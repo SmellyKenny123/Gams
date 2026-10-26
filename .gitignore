@@ -1,7 +1,7 @@
 # Local game folders kept out of Git to avoid staging huge downloads
 # These are added to the catalog via local file links, but are not intended for commit.
 #g/g/baldi-plus/
-g/g/bendy/
+#g/g/bendy/
 g/g/hd_fnaf-main/
 #g/g/Hollow-Knight-Port-main/
 g/g/hotline-miami/
