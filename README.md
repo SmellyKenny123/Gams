@@ -12,7 +12,7 @@ This repository contains a collection of offline games that can be played when y
 2. Download the entire repository as a zip file.
 3. Extract the contents of the zip file.
 4. Copy all the extracted content and paste it into a new folder.
-5. Open the file named `Gams.html` located in the new folder.
+5. Open the file named `index.html` located in the new folder.
 6. This will give you access to a wide range of games, including Flash games.
 
 ### Credits
@@ -41,7 +41,7 @@ Here are some of the most fun games available in this repository:
 
 The JavaScript files in this repository contain the game data encoded as data URLs. When the page is loaded, these data URLs are converted to blob URLs using a conversion function. Blob URLs can be fetched locally since they are generated within the page itself.
 
-The Flash games also bundle Ruffle's WebAssembly runtimes as JavaScript data URLs, which are converted to blob URLs when the player starts. This allows Flash games to continue working when `Gams.html` is opened directly from disk.
+The Flash games also bundle Ruffle's WebAssembly runtimes as JavaScript data URLs, which are converted to blob URLs when the player starts. This allows Flash games to continue working when `index.html` is opened directly from disk.
 
 I that this approach provides an enjoyable offline gaming experience for coders and gamers alike.
 
