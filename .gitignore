@@ -2,9 +2,7 @@
 # These are added to the catalog via local file links, but are not intended for commit.
 #g/g/baldi-plus/
 #g/g/bendy/
-g/g/hd_fnaf-main/*
-!g/g/hd_fnaf-main/1/
-!g/g/hd_fnaf-main/1/**
+g/g/hd_fnaf-main/
 #g/g/Hollow-Knight-Port-main/
 #g/g/hotline-miami/
 #g/g/mfr-webport-main/
