@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Gams</title>
-<link type="image/x-icon" rel="icon" href="img/gams-g.png">
+<link type="image/x-icon" rel="icon" href="img/webretro.png">
 <link rel="stylesheet" href="assets/new.min.css">
 <style>
 html, body {
@@ -197,8 +197,7 @@ transform: translateX(-50%) translateY(-50%);
 
 <div id="contain">
 
-<a href="Settings.html" class="tile"><img class="img" src="img/gams-g.png"><p class="name">Settings</p></a>
-<a href="g/about.html" class="tile"><img class="img" src="img/gams-g.png"><p class="name">About</p></a>
+<a href="Settings.html" class="tile"><img class="img" src="img/webretro.png"><p class="name">Settings</p></a>
 
 </div>
 
@@ -383,104 +382,24 @@ return elm;
 var totalGames = 0;
 
 var gamsList = [
-{title: "Basic", type: "section"},
-{name: "Stickman Hook"},
-{name: "Drive Mad", href: "g/g/drivemad/drivemad.html"},
-{name: "2048"},
-{name: "Cookie Clicker", href: "g/g/cookie/index.html"},
-{name: "Cube Field", href: "g/g/cubefield/index.html"},
-{name: "Spacebar Clicker"},
-{name: "Offline Paradise"},
-{name: "Sand Game"},
-{name: "Agario Lite"},
-{name: "Evil Glitch"},
-{name: "Its Raining Boxes"},
-{name: "T Rex"},
-{name: "Stack"},
-{name: "Rolling Forests"},
-{name: "Radius Raid"},
-{name: "Mountain Maze"},
-{name: "Fluid Simulator"},
-{name: "Edge Not Found"},
-{name: "Ninja vs EVILCORP"},
-{name: "Geometry Dash"},
-{name: "Wordle"},
-{name: "Paper IO 2"},
-
-{title: "Unity", type: "section"},
-{name: "Slope"},
-{name: "Burrito Bison", href: "g/g/burritobison/burritobison.html"},
-{name: "Tube Jumpers"},
-{name: "Hole IO"},
-{name: "Madalin Stunt Cars", href: "g/g/madalinstuntcars/madalinstuntcars.html"},
-{name: "Glass City", href: "g/g/glasscity/glasscity.html"},
-{name: "Tunnel Rush", href: "g/g/tunnelrush/tunnelrush.html"},
-{name: "Tanuki Sunset", href: "g/g/tanukisunset/tanukisunset.html"},
-{name: "A Dance of Fire and Ice", href: "g/g/fireice/index.html"},
-{name: "Game Inside a Game", href: "g/g/gameinsideagame/index.html"},
-{name: "Cell Machine", href: "g/g/cellmachine/index.html"},
-{name: "Slope 2", href: "g/g/slope2/index.html"},
-{name: "Ai Creatures", href: "g/g/aicreatures/index.html"},
-{name: "Grey Box Testing", href: "g/g/greybox/index.html"},
-
-{title: "Retrogaming", type: "section"},
-{name: "Super Mario 64"},
-{name: "Celeste"},
+{title: "Classic", type: "section"},
 {name: "EaglercraftX 1.8", href: "g/EaglercraftX_1.8.html", img: "img/minecraft.png"},
 {name: "Eaglercraft 1.12.2", href: "g/Eaglercraft_1.12.2.html", img: "img/minecraft2.png"},
-{name: "Just One Boss"},
-{name: "Super Mario RPG"},
-
-{title: "Henry Stickmin Flash", type: "section"},
-{name: "Breaking The Bank"},
-{name: "Escaping The Prison"},
-{name: "Stealing The Diamond"},
-{name: "Infiltrating The Airship"},
-{name: "Fleeing The Complex"},
-
-{title: "Flash", type: "section"},
-{name: "Bloxorz"},
-{name: "Tetris"},
-{name: "Flood Runner 4"},
-{name: "Raft Wars"},
-{name: "Raft Wars 2"},
-{name: "Worlds Hardest Game"},
-{name: "The Impossible Quiz"},
-{name: "Learn To Fly Idle"},
-{name: "Learn To Fly 1"},
-{name: "Learn To Fly 2"},
-{name: "Learn To Fly 3"},
-{name: "Bloons Tower Defense 1"},
-{name: "Bloons Tower Defense 2"},
-{name: "Bloons Tower Defense 5"},
-{name: "Cat Ninja"},
-{name: "Pacman"},
-{name: "1 on 1 Soccer"},
-{name: "QWOP"},
-{name: "Use Boxmen"},
-{name: "40x Escape"},
-{name: "Stickman Life"},
-{name: "Duck Life 1"},
-{name: "Duck Life 2"},
-{name: "Duck Life 3"},
-{name: "Duck Life 4"},
-{name: "Duck Life 5"},
 
 {title: "Decomp", type: "section"},
-{name: "Kindergarten 1", href: "g/g/kindergarten/1/index.html", img: "g/g/kindergarten/1/TemplateData/favicon.ico"},
-{name: "Kindergarten 2", href: "g/g/kindergarten/2/index.html", img: "g/g/kindergarten/2/TemplateData/favicon.ico"},
-{name: "Baldi's Basics Plus", href: "g/g/baldi-plus/index.html", img: "g/g/baldi-plus/TemplateData/favicon.ico"},
+{name: "Hollow Knight", href: "g/g/Hollow-Knight-Port-main/index.html", img: "g/g/Hollow-Knight-Port-main/TemplateData/unity-logo-dark.png"},
+{name: "Kindergarten 1", href: "g/g/kindergarten/1/index.html", img: "g/g/kindergarten/1/TemplateData/webgl-logo.png"},
+{name: "Kindergarten 2", href: "g/g/kindergarten/2/index.html", img: "g/g/kindergarten/2/TemplateData/webgl-logo.png"},
+{name: "Baldi's Basics Plus", href: "g/g/baldi-plus/index.html", img: "g/g/baldi-plus/TemplateData/icons/unity-logo-light.png"},
 {name: "Bendy and the Ink Machine", href: "g/g/bendy/index.html", img: "g/g/bendy/TemplateData/favicon.ico"},
 {name: "Hotline Miami", href: "g/g/hotline-miami/index.html", img: "g/g/hotline-miami/favicon.ico"},
 {name: "People Playground", href: "g/g/people-playground/index.html", img: "g/g/people-playground/TemplateData/favicon.ico"},
 {name: "Pizza Tower", href: "g/g/pizza-tower/index.html", img: "g/g/pizza-tower/favicon.png"},
 {name: "ULTRAKILL", href: "g/g/ultrakill/index.html", img: "g/g/ultrakill/TemplateData/favicon.ico"},
-{name: "My Femboy Roommate", href: "g/g/mfr-webport-main/index.html", img: "g/g/mfr-webport-main/icons/icon-192x192.png"},
 
 {title: "Tools", type: "section"},
-{name: "Ruffle Flash Player", href: "g/g/Ruffle/Ruffle.html"},
-{name: "Code Editor", type: "raw"},
-{name: "Web Retro"},
+{name: "Ruffle Flash Player", href: "g/g/Ruffle/Ruffle.html", img: "img/webretro.png"},
+{name: "Web Retro", href: "g/g/webretro/launch.html", img: "img/webretro.png"},
 ];
 
 var container = createElement('div', {
