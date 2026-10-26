@@ -11,5 +11,5 @@ g/g/pizza-tower/
 g/g/ultrakill/
 
 # Optional: ignore generated local runtime artifacts if added later
-g/g/**/Build/
-g/g/**/TemplateData/
+#g/g/**/Build/
+#g/g/**/TemplateData/
