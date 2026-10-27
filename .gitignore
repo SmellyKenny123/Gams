@@ -2,7 +2,14 @@
 # These are added to the catalog via local file links, but are not intended for commit.
 #g/g/baldi-plus/
 #g/g/bendy/
-g/g/claude-of-duty-main
+#g/g/claude-of-duty-main/.github
+g/g/claude-of-duty-main/.tools
+g/g/claude-of-duty-main/export
+g/g/claude-of-duty-main/functions
+g/g/claude-of-duty-main/migrations
+g/g/claude-of-duty-main/netlify
+g/g/claude-of-duty-main/test
+g/g/claude-of-duty-main/tests
 #g/g/hl-main/
 #g/g/hl-main/halva_en_out
 #g/g/hl-main/halva_rus_out
