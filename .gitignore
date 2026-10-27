@@ -16,7 +16,7 @@
 #g/g/mfr-webport-main/
 #g/g/people-playground/
 #g/g/pizza-tower/
-g/g/ultrakill/
+#g/g/ultrakill/
 
 # Optional: ignore generated local runtime artifacts if added later
 #g/g/**/Build/
